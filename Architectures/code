@@ -1,0 +1,9 @@
+flowchart TD
+    User --> Streamlit
+    Streamlit -->|Query| Flask
+    Flask -->|Process| RAG
+    RAG -->|Web Search| SerperAPI
+    RAG -->|LLM| Cohere
+    RAG -->|Answer| Flask
+    Flask -->|Response| Streamlit
+    Streamlit --> User
